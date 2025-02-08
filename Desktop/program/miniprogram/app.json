@@ -1,0 +1,17 @@
+{
+  "pages": ["pages/diagnosis/diagnosis"],
+  "window": {
+    "navigationBarTitleText": "AI医疗助手",
+    "navigationBarBackgroundColor": "#4a90e2",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将用于推荐附近医疗机构"
+    }
+  },
+  "requiredBackgroundModes": ["audio"],
+  "useExtendedLib": {
+    "weui": true
+  }
+} 

@@ -1,0 +1,52 @@
+<view class="container">
+  <!-- 症状输入区 -->
+  <view class="input-section">
+    <textarea 
+      placeholder="请详细描述您的症状（例如：持续三天的胸闷、心悸）" 
+      bindinput="handleInput"
+      value="{{symptoms}}"
+      class="symptom-input"
+      maxlength="500"
+    />
+    <text class="word-count">{{symptoms.length}}/500</text>
+  </view>
+
+  <!-- 提交按钮 -->
+  <button 
+    type="primary" 
+    bindtap="submitSymptoms"
+    class="submit-btn"
+    loading="{{loading}}"
+  >开始AI分析</button>
+
+  <!-- 诊断结果 -->
+  <view wx:if="{{result}}" class="result-section">
+    <view class="section-title">初步分析结果</view>
+    <view class="diagnosis-tag">{{result.diagnosis}}</view>
+    
+    <view class="video-section">
+      <view class="section-title">推荐健康视频</view>
+      <block wx:for="{{result.videos}}" wx:key="_id">
+        <view class="video-card">
+          <video 
+            src="{{item.url}}" 
+            title="{{item.title}}"
+            poster="{{item.poster}}"
+            controls
+            class="medical-video"
+          />
+          <view class="video-info">
+            <text class="video-title">{{item.title}}</text>
+            <text class="video-duration">{{item.duration}}秒</text>
+          </view>
+          <text class="video-cert">{{item.certification}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 免责声明 -->
+  <view class="disclaimer">
+    <text>声明：本结果基于AI分析，仅供参考，不能替代专业医疗诊断</text>
+  </view>
+</view> 

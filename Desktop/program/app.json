@@ -1,0 +1,6 @@
+{
+  "navigateToMiniProgramAppIdList": [
+    "wx健康服务官方小程序appid"
+  ],
+  "requiredPrivateInfos": ["getLocation"]
+} 

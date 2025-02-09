@@ -1,52 +1,40 @@
-<view class="container">
-  <!-- 症状输入区 -->
-  <view class="input-section">
+<view class="chat-container">
+  <!-- 聊天记录 -->
+  <scroll-view class="chat-messages" scroll-y>
+    <block wx:for="{{messages}}" wx:key="id">
+      <view class="message {{item.role}}">
+        <view class="bubble">{{item.content}}</view>
+        <text class="time">{{item.time}}</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 输入区域 -->
+  <view class="input-area">
     <textarea 
-      placeholder="请详细描述您的症状（例如：持续三天的胸闷、心悸）" 
-      bindinput="handleInput"
-      value="{{symptoms}}"
-      class="symptom-input"
-      maxlength="500"
+      placeholder="描述您的症状..."
+      bindinput="onInput"
+      value="{{inputText}}"
+      disabled="{{isAIThinking}}"
     />
-    <text class="word-count">{{symptoms.length}}/500</text>
+    <button 
+      bindtap="sendMessage"
+      disabled="{{!inputText.trim() || isAIThinking}}"
+      loading="{{isAIThinking}}"
+    >发送</button>
   </view>
 
-  <!-- 提交按钮 -->
-  <button 
-    type="primary" 
-    bindtap="submitSymptoms"
-    class="submit-btn"
-    loading="{{loading}}"
-  >开始AI分析</button>
-
-  <!-- 诊断结果 -->
-  <view wx:if="{{result}}" class="result-section">
-    <view class="section-title">初步分析结果</view>
-    <view class="diagnosis-tag">{{result.diagnosis}}</view>
-    
-    <view class="video-section">
-      <view class="section-title">推荐健康视频</view>
-      <block wx:for="{{result.videos}}" wx:key="_id">
-        <view class="video-card">
-          <video 
-            src="{{item.url}}" 
-            title="{{item.title}}"
-            poster="{{item.poster}}"
-            controls
-            class="medical-video"
-          />
-          <view class="video-info">
-            <text class="video-title">{{item.title}}</text>
-            <text class="video-duration">{{item.duration}}秒</text>
-          </view>
-          <text class="video-cert">{{item.certification}}</text>
+  <!-- 关键词确认 -->
+  <view wx:if="{{showKeywordConfirm}}" class="keyword-confirm">
+    <view class="confirm-box">
+      <text class="title">请确认症状关键词：</text>
+      <block wx:for="{{keywords}}" wx:key="index">
+        <view class="keyword-item">
+          <input value="{{item}}" bindinput="updateKeyword" data-index="{{index}}"/>
+          <button class="remove-btn" bindtap="removeKeyword" data-index="{{index}}">×</button>
         </view>
       </block>
+      <button class="confirm-btn" bindtap="fetchVideos">确认获取健康指导</button>
     </view>
-  </view>
-
-  <!-- 免责声明 -->
-  <view class="disclaimer">
-    <text>声明：本结果基于AI分析，仅供参考，不能替代专业医疗诊断</text>
   </view>
 </view> 

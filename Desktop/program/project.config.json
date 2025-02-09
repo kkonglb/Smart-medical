@@ -25,7 +25,8 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "checkSiteMap": false
   },
   "compileType": "miniprogram",
   "srcMiniprogramRoot": "miniprogram/",
@@ -37,5 +38,8 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "requestWhiteList": [
+    "https://api.doubao.com"
+  ]
 }

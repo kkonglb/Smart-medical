@@ -66,4 +66,146 @@
   font-size: 24rpx;
   text-align: center;
   border-radius: 8rpx;
+}
+
+.conversation-step {
+  padding: 30rpx;
+  border-radius: 16rpx;
+  background: #f8f9fa;
+  margin: 20rpx;
+}
+
+.step-question {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.progress {
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.keyword-confirm {
+  padding: 30rpx;
+}
+
+.keyword-item {
+  display: flex;
+  align-items: center;
+  margin: 15rpx 0;
+  padding: 20rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.1);
+}
+
+.remove-btn {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  color: #e74c3c;
+}
+
+.chat-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20rpx;
+  background: #f5f5f5;
+}
+
+.message {
+  margin: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.message.user {
+  align-items: flex-end;
+}
+
+.message.ai {
+  align-items: flex-start;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 20rpx 30rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+.user .bubble {
+  background: #4a90e2;
+  color: white;
+}
+
+.ai .bubble {
+  background: white;
+  border: 1rpx solid #ddd;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.input-area {
+  padding: 20rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #eee;
+}
+
+.input-area textarea {
+  flex: 1;
+  height: 80rpx;
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+
+.keyword-confirm {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 30rpx;
+  box-shadow: 0 -4rpx 10rpx rgba(0,0,0,0.1);
+}
+
+.keyword-item {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+}
+
+.keyword-item input {
+  flex: 1;
+  border-bottom: 1rpx solid #ddd;
+  padding: 10rpx;
+}
+
+.remove-btn {
+  width: 60rpx;
+  height: 60rpx;
+  color: #ff4444;
+  margin-left: 20rpx;
+}
+
+.confirm-btn {
+  margin-top: 40rpx;
+  background: #4a90e2;
+  color: white;
 } 

@@ -1,0 +1,211 @@
+.container {
+  padding: 20rpx;
+}
+
+.input-section {
+  position: relative;
+  margin: 30rpx 0;
+}
+
+.symptom-input {
+  width: 100%;
+  height: 300rpx;
+  padding: 30rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+}
+
+.word-count {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.submit-btn {
+  width: 90%;
+  margin: 40rpx auto;
+  border-radius: 50rpx;
+  background: #4a90e2;
+}
+
+.diagnosis-tag {
+  background: #f0f7ff;
+  color: #4a90e2;
+  padding: 20rpx 30rpx;
+  border-radius: 8rpx;
+  margin: 20rpx 0;
+  font-weight: bold;
+}
+
+.video-card {
+  margin: 30rpx 0;
+  border-radius: 12rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.medical-video {
+  width: 100%;
+  height: 400rpx;
+}
+
+.video-info {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.disclaimer {
+  margin-top: 50rpx;
+  padding: 30rpx;
+  background: #fff9f9;
+  color: #e64340;
+  font-size: 24rpx;
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.conversation-step {
+  padding: 30rpx;
+  border-radius: 16rpx;
+  background: #f8f9fa;
+  margin: 20rpx;
+}
+
+.step-question {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.progress {
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.keyword-confirm {
+  padding: 30rpx;
+}
+
+.keyword-item {
+  display: flex;
+  align-items: center;
+  margin: 15rpx 0;
+  padding: 20rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.1);
+}
+
+.remove-btn {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  color: #e74c3c;
+}
+
+.chat-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20rpx;
+  background: #f5f5f5;
+}
+
+.message {
+  margin: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.message.user {
+  align-items: flex-end;
+}
+
+.message.ai {
+  align-items: flex-start;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 20rpx 30rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+.user .bubble {
+  background: #4a90e2;
+  color: white;
+}
+
+.ai .bubble {
+  background: white;
+  border: 1rpx solid #ddd;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.input-area {
+  padding: 20rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #eee;
+}
+
+.input-area textarea {
+  flex: 1;
+  height: 80rpx;
+  padding: 10rpx 20rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+
+.keyword-confirm {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 30rpx;
+  box-shadow: 0 -4rpx 10rpx rgba(0,0,0,0.1);
+}
+
+.keyword-item {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+}
+
+.keyword-item input {
+  flex: 1;
+  border-bottom: 1rpx solid #ddd;
+  padding: 10rpx;
+}
+
+.remove-btn {
+  width: 60rpx;
+  height: 60rpx;
+  color: #ff4444;
+  margin-left: 20rpx;
+}
+
+.confirm-btn {
+  margin-top: 40rpx;
+  background: #4a90e2;
+  color: white;
+} 

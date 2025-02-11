@@ -3,7 +3,7 @@
   "cloudfunctionRoot": "cloudfunctions/",
   "appid": "wx633a9f857bf29535",
   "projectname": "医疗健康助手",
-  "libVersion": "2.20.1",
+  "libVersion": "3.7.7",
   "cloud": true,
   "permission": {
     "scope.userLocation": {
